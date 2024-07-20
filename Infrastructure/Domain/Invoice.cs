@@ -18,8 +18,7 @@ namespace Infrastructure.Domain
         public string CustomerAddress { get; set; }
         public int? BusinessId { get; set; }
         [ForeignKey("BusinessId")]
-        public Business? Business { get; set; }
-        public string BusinessAddress { get; set; }
+        public Business? Business { get; set; }        
 
     }
 }
