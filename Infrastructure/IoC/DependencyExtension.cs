@@ -22,6 +22,8 @@ namespace Infrastructure.IoC
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IInvoiceService, InvoiceService>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IBusinessService, BusinessService>();
         }
     }
 }
