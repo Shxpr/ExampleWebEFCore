@@ -1,6 +1,37 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+
+    List<NavModel> navModels = new List<NavModel>();
+    navModels.Add(new NavModel
+            {
+                IsActive = true,
+                IsHidden = false,
+                Text = "Home"
+            });
+
+    navModels.Add(new NavModel
+            {
+                IsActive = false,
+                IsHidden = true,
+                Text = "Business"
+            });
+
+    navModels.Add(new NavModel
+            {
+                IsActive = false,
+                IsHidden = true,
+                Text = "Invoice"
+            });
+
+    navModels.Add(new NavModel
+            {
+                IsActive = false,
+                IsHidden = true,
+                Text = "Customer"
+            });
 }
+
+@await Component.InvokeAsync(typeof(NavViewComponent), navModels);
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
