@@ -14,7 +14,9 @@ namespace UnitTestRepository
     public class RepositoryTest
     {
         private DbContextOptions<EFCoreDBContext> _dbContextOptions;
+#pragma warning disable NUnit1032 // An IDisposable field/property should be Disposed in a TearDown method
         private EFCoreDBContext _context;
+#pragma warning restore NUnit1032 // An IDisposable field/property should be Disposed in a TearDown method
 
         [SetUp]
         public void Setup()
@@ -30,7 +32,7 @@ namespace UnitTestRepository
         public async Task AddAsync_ShouldAddEntity()
         {
             var repository = new Repository<Invoice>(_context);
-            var invoice = new Invoice { CustomerAddress = "Test Customer 1", Id = 1, InvoiceNumber = "Test Invoice 1", BusinessAddress = "Test Business 1" };
+            var invoice = new Invoice { CustomerAddress = "Test Customer 1", Id = 1, InvoiceNumber = "Test Invoice 1" };            
 
             repository.Add(invoice);
 
