@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Shakes\source\repos\ExampleWebEFCore\ExampleWebEFCore
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Shakes/source/repos/ExampleWebEFCore/ExampleWebEFCore/Views/Business/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Shakes/source/repos/ExampleWebEFCore/ExampleWebEFCore/Views/Customer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Shakes/source/repos/ExampleWebEFCore/ExampleWebEFCore/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Shakes/source/repos/ExampleWebEFCore/ExampleWebEFCore/Views/Invoice/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Shakes/source/repos/ExampleWebEFCore/ExampleWebEFCore/Views/Shared/Error.cshtml]
