@@ -27,6 +27,15 @@
                 IsHidden = true,
                 Text = "Customer"
             });
+    GridViewModel invoiceGv = new GridViewModel();
+    invoiceGv.Columns = new List<string>();
+    invoiceGv.StyleHeader = "table table-striped table-bordered";
+    invoiceGv.Columns.Add("Id");
+    invoiceGv.Columns.Add("Number");
+    invoiceGv.Columns.Add("Customer Id");
+    invoiceGv.Columns.Add("Business Id");
+    invoiceGv.Columns.Add("Business");
 }
 
 @await Component.InvokeAsync(typeof(NavViewComponent), navModels);
+@await Component.InvokeAsync(typeof(GridViewComponent), invoiceGv)
