@@ -1,4 +1,5 @@
-﻿@model GridViewModel
+﻿@model GridViewModel<object>
+
 <table class="@Model.StyleHeader">
     <thead>
         <tr>
@@ -8,6 +9,19 @@
             }
         </tr>
     </thead>
-    <tbody>    
+    <tbody> 
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                @if (item != null)
+                {
+                    var properties = item.GetType().GetProperties();
+                    @foreach(var property in properties)
+                    {
+                        <td>@property.GetValue(item)</td>
+                    }
+                }
+            </tr>
+        }        
     </tbody>
 </table>

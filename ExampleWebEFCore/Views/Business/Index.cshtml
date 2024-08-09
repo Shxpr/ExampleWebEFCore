@@ -27,12 +27,17 @@
                 IsHidden = true,
                 Text = "Customer"
             });
-    GridViewModel businessGv = new GridViewModel();
+    GridViewModel<object> businessGv = new GridViewModel<BusinessModel>();
     businessGv.Columns = new List<string>();    
     businessGv.StyleHeader = "table table-striped table-bordered";
     businessGv.Columns.Add("Id");
     businessGv.Columns.Add("Name");
     businessGv.Columns.Add("Address");
+    var data = new List<BusinessModel>();
+    data.Add(new BusinessModel { Id = 1, Name = "Test 1", Address = "Test 1" });
+    data.Add(new BusinessModel { Id = 2, Name = "Test 2", Address = "Test 2" });
+    data.Add(new BusinessModel { Id = 3, Name = "Test 3", Address = "Test 3" });
+    businessGv.Data = data.Cast<object>().ToList();
 }
 
 @await Component.InvokeAsync(typeof(NavViewComponent), navModels);
