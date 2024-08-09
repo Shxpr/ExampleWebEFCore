@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExampleWebEFCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c12f202abbb564ddf4000d4a75a17d6302444a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7e6a4ce82800d32672f59cdeabf6fbc1a7a1277")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExampleWebEFCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExampleWebEFCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
