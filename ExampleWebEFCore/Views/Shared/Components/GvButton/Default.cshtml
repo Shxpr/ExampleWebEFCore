@@ -1,0 +1,12 @@
+﻿@model List<ButtonModel>
+
+<div class="row">
+    @foreach(var item in Model)
+    {
+        <div class="col-6">
+            <a class="btn @(item.StyleButton == EnumButtonCss.Warning ? "btn-warning" :item.StyleButton == EnumButtonCss.Default ? "btn-primary" :item.StyleButton == EnumButtonCss.Danger ? "btn-danger" :"btn-success")" asp-action="@item.Action" asp-controller="@item.Controller">
+                @item.Text
+            </a>
+        </div>
+    }
+</div>

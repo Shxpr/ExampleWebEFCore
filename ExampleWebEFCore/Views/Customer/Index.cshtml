@@ -38,8 +38,13 @@
     data.Add(new CustomerModel { Id = 2, Name = "Test 2", LastName = "Test 2" });
     data.Add(new CustomerModel { Id = 3, Name = "Test 3", LastName = "Test 3" });
     customerGv.Data = data.Cast<object>().ToList();
+
+    List<ButtonModel> buttonModels = new List<ButtonModel>();
+    buttonModels.Add(new ButtonModel { Action = "New", Controller = "Customer", StyleButton = EnumButtonCss.Success, Text = "New Customer" });
+    buttonModels.Add(new ButtonModel { Action = "Delete", Controller = "Customer", StyleButton = EnumButtonCss.Danger, Text = "Delete Customer" });
 }
 
 @await Component.InvokeAsync(typeof(NavViewComponent), navModels);
-@await Component.InvokeAsync(typeof(GridViewComponent), customerGv)
+@await Component.InvokeAsync(typeof(GridViewComponent), customerGv);
+@await Component.InvokeAsync(typeof(GvButtonViewComponent), buttonModels)
 
