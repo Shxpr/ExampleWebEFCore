@@ -1,0 +1,7 @@
+﻿@model PageCustomerNewModel
+
+@await Component.InvokeAsync(typeof(NavViewComponent), Model.navModels);
+<div class="container">   
+        @await Component.InvokeAsync(typeof(CustomerViewComponent), Model.customer)
+</div>
+
