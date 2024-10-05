@@ -1,0 +1,6 @@
+﻿@model PageInvoiceModel
+
+@await Component.InvokeAsync(typeof(NavViewComponent), Model.NavModels);
+<div class="container">
+        @await Component.InvokeAsync(typeof(InvoiceViewComponent), Model.InvoiceGv)
+</div>

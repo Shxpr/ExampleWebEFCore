@@ -18,7 +18,17 @@
                     var properties = item.GetType().GetProperties();
                     @foreach(var property in properties)
                     {
-                        <td>@property.GetValue(item)</td>
+                        if (property.PropertyType == typeof(List<ButtonModel>))
+                        {
+                            var buttons = (List<ButtonModel>)property.GetValue(item);
+                            <td>
+                                @await Component.InvokeAsync(typeof(GvButtonViewComponent), buttons)
+                            </td>
+                        }
+                        else
+                        {
+                            <td>@property.GetValue(item)</td>
+                        }
                     }
                 }
             </tr>
