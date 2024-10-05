@@ -1,45 +1,9 @@
-﻿@{
-    List<NavModel> navModels = new List<NavModel>();
-    navModels.Add(new NavModel
-            {
-                IsActive = false,
-                IsHidden = false,
-                Text = "Home"
-            });
+﻿@model PageBusinessModel
+@{
 
-    navModels.Add(new NavModel
-            {
-                IsActive = true,
-                IsHidden = false,
-                Text = "Business"
-            });
-
-    navModels.Add(new NavModel
-            {
-                IsActive = false,
-                IsHidden = true,
-                Text = "Invoice"
-            });
-
-    navModels.Add(new NavModel
-            {
-                IsActive = false,
-                IsHidden = true,
-                Text = "Customer"
-            });
-    GridViewModel<object> businessGv = new GridViewModel<object>();
-    businessGv.Columns = new List<string>();    
-    businessGv.StyleHeader = "table table-striped table-bordered";
-    businessGv.Columns.Add("Id");
-    businessGv.Columns.Add("Name");
-    businessGv.Columns.Add("Address");
-    var data = new List<BusinessModel>();
-    data.Add(new BusinessModel { Id = 1, Name = "Test 1", Address = "Test 1" });
-    data.Add(new BusinessModel { Id = 2, Name = "Test 2", Address = "Test 2" });
-    data.Add(new BusinessModel { Id = 3, Name = "Test 3", Address = "Test 3" });
-    businessGv.Data = data.Cast<object>().ToList();
 }
 
-@await Component.InvokeAsync(typeof(NavViewComponent), navModels);
-@await Component.InvokeAsync(typeof(GridViewComponent), businessGv)
+@await Component.InvokeAsync(typeof(NavViewComponent), Model.NavModels);
+@await Component.InvokeAsync(typeof(GridViewComponent), Model.BusinessGv)
+@await Component.InvokeAsync(typeof(GvButtonViewComponent), Model.ButtonModels)
 
